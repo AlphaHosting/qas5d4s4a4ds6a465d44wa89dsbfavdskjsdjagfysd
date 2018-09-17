@@ -315,8 +315,8 @@ client.on("message", message => {
      Other Commands
 :inbox_tray:  .invite         : لدعوة البوت الى سيرفرك 
 :mailbox_with_mail: .contact  : لإرسال رسالة الى صاحب البوت
-:up:   .vote                  : To Vote For The Bot
-:gear:                        : Bot Informations
+:up:  .vote                   : To Vote For The Bot
+:gear: .bot                   : Bot Informations
 `)
  
 	  
