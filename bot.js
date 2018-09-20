@@ -5,7 +5,7 @@ const prefix = '.'
 
 client.on('ready', function(){	
     var ms = 40000 ;
-    var setGame = ['.help','Quran Bot'];	
+    var setGame = ['In Maintenance ','Quran Bot'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
